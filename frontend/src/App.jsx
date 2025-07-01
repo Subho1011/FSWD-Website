@@ -1,18 +1,15 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { Outlet } from "react-router-dom";
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import Login from "./components/Login";
+// import App from ".App";
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
-    <>
-      {isLoggedIn && <Header />}
-      <main>
-        <Outlet />
-      </main>
-      {isLoggedIn && <Footer />}
-    </>
+    <div>
+      <div className="min-h-screen  items-center justify-center bg-gradient-to-br from-black via-purple-900 to-black">
+      <Navbar />
+        <Login />
+      </div>
+    </div>
   );
 };
 
